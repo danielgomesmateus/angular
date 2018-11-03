@@ -14,7 +14,8 @@ git clone https://github.com/danielgomesmateus/angular.git
 
 ### Pré requisitos
 
-- typescript
+- NodeJS
+- NPM
 
 ### Instalação
 
