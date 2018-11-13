@@ -3,3 +3,11 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.bg-light {
+    background-color: #000 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #fff !important;
+}
