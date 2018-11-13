@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class TopComponent {
 
+    public title:string = 'Desenvolvimento WEB com Angular';
 }
