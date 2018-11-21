@@ -18,17 +18,17 @@
                     {{ title }}
                 </h4>
                 <p>
-                    {{ phrases[0].phraseEng }}
+                    {{ roundPhrase.phraseEng }}
                 </p>
                 <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" (input)="updateAnswer($event)"></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="d-flex justify-content-end">
-                    <input type="button" class="btn btn-success" value="Traduzir">
+                    <input type="button" class="btn btn-success" value="Traduzir" (click)="checkAnswer()">
                 </div>
             </div>
         </div>
