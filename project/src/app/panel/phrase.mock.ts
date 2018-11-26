@@ -7,7 +7,7 @@ export const PHRASE: PhraseModel[] = [
     },
     {
         phraseEng: 'I watch TV',
-        phrasePtBr: 'Eu assisto de ver TV'
+        phrasePtBr: 'Eu assisto TV'
     },
     {
         phraseEng: 'How are you?',

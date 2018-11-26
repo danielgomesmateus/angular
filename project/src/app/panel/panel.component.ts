@@ -12,14 +12,15 @@ export class PanelComponent implements OnInit {
 
   public phrases: PhraseModel[] = PHRASE;
   public title: string = 'Traduza a frase:';
-  public answer: string;
+  public answer: string = '';
   public round: number = 0;
   public roundPhrase: PhraseModel;
   public progressBar: number = 0;
+  public attempts: number = 3;
 
   constructor() { 
 
-    this.roundPhrase = this.phrases[this.round];
+    this.updateRoundPhrase();
   }
 
   ngOnInit() {
@@ -35,15 +36,23 @@ export class PanelComponent implements OnInit {
     if(this.answer == this.roundPhrase.phrasePtBr) {
       
       this.round ++;
-      this.roundPhrase = this.phrases[this.round];
-
+      this.updateRoundPhrase();
       this.progressBar += 25;
-      
-      window.alert("Tradução correta!");
     }
     else {
 
-      window.alert("Tradução incorreta!");
+      this.attempts -= 1;
+
+      if(this.attempts == -1) {
+
+        window.alert("GAME OVER");
+      }
     }
+  }
+
+  public updateRoundPhrase(): void {
+
+    this.roundPhrase = this.phrases[this.round];
+    this.answer = '';
   }
 }

@@ -2,7 +2,7 @@
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-6">
-                <app-progress>
+                <app-progress [progress]="progressBar">
                 </app-progress>
             </div>
             <div class="col-md-6">
@@ -21,7 +21,7 @@
                     {{ roundPhrase.phraseEng }}
                 </p>
                 <div class="form-group">
-                    <textarea class="form-control" rows="3" (input)="updateAnswer($event)"></textarea>
+                    <textarea class="form-control" rows="3" (input)="updateAnswer($event)" [value]="answer"></textarea>
                 </div>
             </div>
         </div>
